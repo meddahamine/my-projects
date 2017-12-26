@@ -22,11 +22,11 @@ public class Donnees{
 	static List<Module> listeObligatoire = new ArrayList<Module>();
 	
 
-	static Etudiant E1= new Etudiant("ADDAD","Dihia","012345","Informatique","Master 1",liste1);
-	static Etudiant E2= new Etudiant("HAMITOUCHE","Sonia","016589","Informatique","Master 1",liste1);
+	static Etudiant E1= new Etudiant("alice1","alice1","012345","Informatique","Master 1",liste1);
+	static Etudiant E2= new Etudiant("bob1","boob1","016589","Informatique","Master 1",liste1);
 	
-	static Etudiant E3= new Etudiant("ADDAD","Soraya","011245","Informatique","Master 1",liste2);
-	static Etudiant E4= new Etudiant("HAMITOUCHE","Saliha","018795","Informatique","Master 1",liste2);
+	static Etudiant E3= new Etudiant("alice2","alice2","011245","Informatique","Master 1",liste2);
+	static Etudiant E4= new Etudiant("bob2","bob2","018795","Informatique","Master 1",liste2);
 	
 	static List<Etudiant> listeG1 = new ArrayList<>();
 	static List<Etudiant> listeG2 = new ArrayList<>();
