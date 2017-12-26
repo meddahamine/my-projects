@@ -1,0 +1,11 @@
+1- Nom des auteurs :
+	Le projet est réalisé en binôme par : 
+						1- AOUDJIT Said Oulguendouz
+						2- MEDDAH Amine
+
+2- Adresse du dépôt git :
+	L'adresse du dépôt git qui contient notre projet est : https://github.com/SaidOulguendouz/WEB2
+
+
+3- Adresse du service REST :
+	L'adresse de notre service REST est : https://sepabank.herokuapp.com/

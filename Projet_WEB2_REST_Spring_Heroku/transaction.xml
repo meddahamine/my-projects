@@ -1,0 +1,25 @@
+<DrctDbtTxInf>
+	<PmtId>REF OPE SSSS</PmtId>
+	<InstdAmt>5900.47</InstdAmt>
+	<DrctDbtTx>
+		<MndtRltdInf>
+			<MndtId>MANDAT NO 111127</MndtId>
+			<DtOfSgntr>2016-08-16</DtOfSgntr>
+		</MndtRltdInf>
+	</DrctDbtTx>
+	<DbtrAgt>
+		<FinInstnId>
+		<BIC>ABNAFMTR</BIC>
+		</FinInstnId>
+	</DbtrAgt>
+	<Dbtr>
+		<Nm>Mr Debiteur N17</Nm>
+	</Dbtr>
+	<DbtrAcct>
+		<Id>
+			<IBAN>FR7630001007941234567895976</IBAN>
+		</Id>
+	</DbtrAcct>
+	<RmtInf>Facture N17</RmtInf>
+</DrctDbtTxInf>
+

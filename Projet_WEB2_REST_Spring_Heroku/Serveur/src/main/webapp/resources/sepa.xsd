@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!-- Définition des trypes -->
+		<!-- Max35Text Type -->
+		<xs:simpleType name="Max35Text">
+	        <xs:restriction base="xs:string">
+	            <xs:minLength value="1"/>
+	            <xs:maxLength value="35"/>
+	        </xs:restriction>
+	    </xs:simpleType>
+	    
+	    <!-- Max15NumericText Type -->
+	    <xs:simpleType name="Max15NumericText">
+	        <xs:restriction base="xs:string">
+	            <xs:pattern value="[0-9]{1,15}"/>
+	        </xs:restriction>
+	    </xs:simpleType>
+    
+		<!-- IBANType -->
+		<xs:simpleType name="IBANType">
+		    <xs:restriction base="xs:string">
+		      <xs:pattern value="[A-Z]{2}[0-9]{2}([0-9]|[A-Z])+"/>
+		    </xs:restriction>
+		</xs:simpleType>
+		
+		<!-- BICType -->
+		<xs:simpleType name="BICType">
+		    <xs:restriction base="xs:string">
+		      <xs:pattern value="[A-Z]{8}|[A-Z]{11}"/>
+		    </xs:restriction>
+		</xs:simpleType> 
+		
+								<!-- CmpsdIdt Type -->
+								<xs:complexType name="CmpsdIdt">
+									<xs:sequence>
+										<xs:element name="Id" minOccurs="1" maxOccurs="1">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="IBAN" type="IBANType" minOccurs="1" maxOccurs="1"></xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+								
+								<!-- CmpsdNmd Type -->
+								<xs:complexType name="CmpsdNmd">
+									<xs:sequence>
+										<xs:element name="Nm" type="Max35Text" minOccurs="1" maxOccurs="1"></xs:element>
+									</xs:sequence>
+								</xs:complexType>
+								
+								<!-- CmpsdAgt Type -->
+								<xs:complexType name="CmpsdAgt">
+									<xs:sequence>
+										<xs:element name="FinInstnId" minOccurs="1" maxOccurs="1">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="BIC" type="BICType" minOccurs="1" maxOccurs="1"></xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+								
+								<!-- CmpsdTx Type -->
+								<xs:complexType name="CmpsdTx">
+									<xs:sequence>
+										<xs:element name="MndtRltdInf" minOccurs="1" maxOccurs="1">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="MndtId" type="Max35Text" minOccurs="1" maxOccurs="1"></xs:element>
+													<xs:element name="DtOfSgntr" type="xs:date" minOccurs="1" maxOccurs="1"></xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+
+<!-- Element d'une transaction -->
+	
+				<!-- Direct Debit Transaction Information -->
+				<xs:element name="DrctDbtTxInf">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PmtId" type="Max35Text" minOccurs="1" maxOccurs="1"></xs:element>
+							
+							<xs:element name="InstdAmt" type="xs:decimal" minOccurs="1" maxOccurs="1"></xs:element>
+							
+							<xs:element name="DrctDbtTx" type="CmpsdTx" minOccurs="1" maxOccurs="1">
+							</xs:element>
+							
+							<xs:element name="DbtrAgt" minOccurs="1" maxOccurs="1" type="CmpsdAgt"></xs:element>
+							
+							<xs:element name="Dbtr" minOccurs="1" maxOccurs="1" type="CmpsdNmd"></xs:element>
+							
+							<xs:element name="DbtrAcct" minOccurs="1" maxOccurs="1" type="CmpsdIdt"></xs:element>
+							
+							<xs:element name="RmtInf" type="xs:string" minOccurs="1" maxOccurs="unbounded"></xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+
+</xs:schema>
