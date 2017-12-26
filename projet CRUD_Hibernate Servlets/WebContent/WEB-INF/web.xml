@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>CRUD_Hibernate</display-name>
+  <servlet>
+	  <servlet-name>csalbum</servlet-name>
+	  <servlet-class>servlet.ControllerAlbumServlet</servlet-class>
+  </servlet>
+   <servlet-mapping>
+  <servlet-name>csalbum</servlet-name>
+  <url-pattern>/albumlist.php</url-pattern>
+  <url-pattern>/saveAlbum.php</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet>
+	  <servlet-name>csartiste</servlet-name>
+	  <servlet-class>servlet.ControllerArtisteServlet</servlet-class>
+  </servlet>
+   <servlet-mapping>
+  <servlet-name>csartiste</servlet-name>
+  <url-pattern>/artistelist.php</url-pattern>
+  <url-pattern>/saveArtiste.php</url-pattern>
+  </servlet-mapping>
+    
+  <servlet>
+	  <servlet-name>cstypesupport</servlet-name>
+	  <servlet-class>servlet.ControllerTypeSupportServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	  <servlet-name>cstypesupport</servlet-name>
+	  <url-pattern>/typesupportlist.php</url-pattern>
+	  <url-pattern>/saveTypeSupport.php</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	  <servlet-name>cstitremusical</servlet-name>
+	  <servlet-class>servlet.ControllerTitreMusicalServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	  <servlet-name>cstitremusical</servlet-name>
+	  <url-pattern>/titremusicallist.php</url-pattern>
+	  <url-pattern>/saveTitreMusical.php</url-pattern>
+  </servlet-mapping>
+
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="bm"/>
+  <table-filter match-name="artiste"/>
+  <table-filter match-name="album"/>
+  <table-filter match-name="typesupport"/>
+  <table-filter match-name="titremusical"/>
+</hibernate-reverse-engineering>
