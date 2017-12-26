@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="sigma_spring:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="sigma_spring.war">
+      <element id="artifact" artifact-name="sigma_spring:war exploded" />
+    </root>
+  </artifact>
+</component>
