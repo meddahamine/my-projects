@@ -1,0 +1,16 @@
+1-on a deviné le caractère qui a répété plusieurs fois dans la chaine de caractères
+2-sachant que la chaine est en français alors le caractère qui a une forte  probabilité de répéter plusieurs fois est l'espace 
+3-la chaine en français commence dans  la plupart des temps par une majuscule 
+4-la chaine en français ne peut pas commencer par un caractère spécial
+5-tout celà réduit le nombre des combinaisons ,et alors on a pu afficher tout les chaines de caractères et les coefficients  "a" et "b" 
+avec la fonction "attaqueForceBrute" 
+6-après l'analyse de résultat de la fonction "attaqueForceBrute" on a touvé que la clé la plus adaptée est "a=179  & b=187" (179,187) .
+7-on a affiché le résultat sous deux formes  différentes :
+  *la chaine de caractères entière directement (mais ya des caractères qu'on peux pas afficher avec java)
+  *la chaine de caractères caractère par caractère(chaque caractère avec son code ascii pour mieux distinguer les caractères spéciaux des caractères normals)
+8-l'ancien mot de passe est : "DUUUNNNSDFSGHNNNNNNNYYYYYYYYYYYYVU"
+9-le nouveau mot de passe est : "GÉÇÀNVZÙíêíê"
+
+
+
+Groupe: -MEDDAH Amine

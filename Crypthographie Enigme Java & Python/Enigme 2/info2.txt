@@ -1,0 +1,11 @@
+Bob a répondu au message d'Alice. 
+
+Le message clair était sous forme d'un fichier .txt, qui a été chiffré à l'aide d'une substitution appliquée octet par octet. La fonction de substitution est basée sur un algorithme très simple. Le chiffré est contenu dans le fichier cryptogramme2.txt .
+
+Questions:
+
+1) quel est le message (exact) de Bob ?
+
+2) quel est l'algorithme utilisé pour la fonction de substitution ?
+
+

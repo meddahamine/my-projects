@@ -1,0 +1,44 @@
+import java.io.*;
+import java.util.*;
+
+public class Convert
+{
+public static void printBytes (String s, String charsetName) throws UnsupportedEncodingException
+{
+int length = s.length ();
+
+byte[] bytes = s.getBytes (charsetName);
+ByteArrayInputStream in = new ByteArrayInputStream (bytes);
+
+int byte255;
+while ((byte255 = in.read ()) != -1)
+{
+System.out.print (byte255 + " ");
+}
+System.out.println();
+}
+
+public static void main (String[] args) throws UnsupportedEncodingException
+{
+printBytes ("Ä", "ISO-8859-1"); // encodage occidental
+printBytes ("Ä", "UTF-16");
+printBytes ("", "UTF-8");
+String x="";
+x=x+Main.toChar(Main.reduce(Main.invers(256,179)*(128- 187), 256));
+x=x+Main.toChar(Main.reduce(Main.invers(256,179)*(146- 187), 256));
+x=x+Main.toChar(Main.reduce(Main.invers(256,179)*(146- 187), 256));
+
+System.out.println(x);
+
+String txt2decode="’";
+int length = txt2decode.length();
+byte[] utf8Bytes = txt2decode.getBytes ("UTF8");
+for (int i = 0; i < length; i++)
+{
+int code = utf8Bytes[i] & 0xff;
+System.out.println(code);
+}
+
+}
+
+}

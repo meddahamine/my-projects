@@ -1,0 +1,160 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+	
+	public static int pgcd(int m, int n) {
+		int r = 0;
+		while (n != 0) {
+			r = m % n;
+			m = n;
+			n = r;
+		}
+		return m;
+	}
+
+	public static int invers(int n, int b) {
+		int no = n;
+		int bo = b;
+		int to = 0;
+		int t = 1;
+		int q = no / bo;
+		int r = no - q * bo;
+		while (r > 0) {
+
+			int temp = to - q * t;
+			if (temp >= 0)
+				temp = temp % n;
+			else
+				temp = n - ((-temp) % n);
+			to = t;
+			t = temp;
+			no = bo;
+			bo = r;
+			q = no / bo;
+			r = no - q * bo;
+		}
+		if (bo != 1)
+			return 4444444;
+		else
+			return t;
+	}
+	
+   public static char toChar(int codeASCII){
+
+     return (char)codeASCII;
+    }
+
+   public static int toASCII(char lettre)
+{
+return (int)lettre;
+}
+
+   public static int reduce(int n, int mod)
+   {
+	int m = n % mod;	// -mod < m < mod
+
+	if (m >= 0 )
+	    return m;
+	else 
+	    return m + mod;
+   }
+     
+	public static void attaqueForceBrute(String str) {
+
+		int n;
+		String x = "";
+		for (int i = 1; i <= 256; i++) {
+
+			n = Main.invers(256, i);
+			if (n != 4444444) {
+				for (int b = 0; b <= 256; b++) {
+
+					if (((Main.reduce(n*(Main.toASCII(str.charAt(0)) - b), 256) >= 76) && ((Main.reduce(n * (Main.toASCII(str.charAt(0)) - b), 256) <= 76)))
+							&& ((Main.reduce(n * (Main.toASCII(str.charAt(1)) - b), 256) >= 65)
+									&& ((Main.reduce(n * (Main.toASCII(str.charAt(1)) - b), 256) <= 122)))) {
+						for (int j = 0; j < str.length(); j++)
+							x = x + Main.toChar(
+									Main.reduce(Main.invers(256, i) * (Main.toASCII(str.charAt(j)) - b), 256));
+						 System.out.println(x +"                    "+"a= "+i+"   b= "+b);
+						 x="";
+						 
+					}
+
+				}
+			}
+		}
+	}
+	
+//  Main.attaqueForceBrute("ßú»’øw»Gú»");
+    public static void main(String[] args) {
+		
+       List<Integer >in=new ArrayList<Integer>(); 
+       List<Integer >out=new ArrayList<Integer>();
+  	
+        String strin="ßú»’øw»Gú»«.ÄÄú».»”.E`Fé»”ú»E úÄw»«ß*Ä»G***EEEÄG­Ä`EEEEEEEööööööööööööİ*»’.ÆÄ»`FàûE:ÔĞİ©vj»…rYrY";
+
+        int n,m;
+        String 	strout="";
+        
+		for(int i=0;i<strin.length();i++) 
+		{   
+			n = Main.toASCII(strin.charAt(i));
+			
+			if (n == 8217)
+				n = 146;
+			if (n == 8221)
+				n = 148;
+			if (n == 8230)
+				n = 133;
+			
+			in.add(n);
+			
+			m=Main.reduce(Main.invers(256,179)*(n- 187), 256);
+			
+			out.add(m);	
+			
+	        strout=strout+Main.toChar(Main.reduce(Main.invers(256,179)*(n- 187), 256));		    
+		}
+
+//	    String str;
+		
+//	     for (Integer iout :out){
+//	    	 
+// 
+ //          str=Main.toChar(iout);
+		
+//	    	 if  (iout==0) 
+//	    	
+//	    		 str="NULL";
+//	    	 
+//	    	 if  (m==22) 
+//    			 str="SYN";
+//	    	 
+//	    	 if  (m==12) 
+//    			 str="FF";
+//	    	
+//	    	 if  (m==5) 
+//    			 str="ENQ";
+//	    	 
+//	    	 if  (m==3) 
+//    			 str="ETX";
+//	    	 
+//	    	 if  (m==21) 
+//    			 str="NAK";
+//	    	 
+		
+//	    	 System.out.println(str);	  
+//	    	
+//	    	 	
+//	 
+//	     }	
+//		
+	     System.out.println(strout);	   
+	
+    }	
+	
+ 	    
+}
+	
+

@@ -1,0 +1,180 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+	
+	public static int pgcd(int m, int n) {
+		int r = 0;
+		while (n != 0) {
+			r = m % n;
+			m = n;
+			n = r;
+		}
+		return m;
+	}
+
+	public static int invers(int n, int b) {
+		int no = n;
+		int bo = b;
+		int to = 0;
+		int t = 1;
+		int q = no / bo;
+		int r = no - q * bo;
+		while (r > 0) {
+
+			int temp = to - q * t;
+			if (temp >= 0)
+				temp = temp % n;
+			else
+				temp = n - ((-temp) % n);
+			to = t;
+			t = temp;
+			no = bo;
+			bo = r;
+			q = no / bo;
+			r = no - q * bo;
+		}
+		if (bo != 1)
+			return 4444444;
+		else
+			return t;
+	}
+	
+   public static char toChar(int codeASCII){
+
+     return (char)codeASCII;
+    }
+
+   public static int toASCII(char lettre)
+{
+return (int)lettre;
+}
+
+   public static int reduce(int n, int mod)
+   {
+	int m = n % mod;	// -mod < m < mod
+
+	if (m >= 0 )
+	    return m;
+	else 
+	    return m + mod;
+   }
+     
+	public static void attaqueForceBrute(String str) {
+
+		int n;
+		String x = "";
+		for (int i = 1; i <= 256; i++) {
+
+			n = Main.invers(256, i);
+			if (n != 4444444) {
+				for (int b = 0; b <= 256; b++) {
+
+					if (((Main.reduce(n*(Main.toASCII(str.charAt(0)) - b), 256) >= 76) && ((Main.reduce(n * (Main.toASCII(str.charAt(0)) - b), 256) <= 76)))
+							&& ((Main.reduce(n * (Main.toASCII(str.charAt(1)) - b), 256) >= 65)
+									&& ((Main.reduce(n * (Main.toASCII(str.charAt(1)) - b), 256) <= 122)))) {
+						for (int j = 0; j < str.length(); j++)
+							x = x + Main.toChar(
+									Main.reduce(Main.invers(256, i) * (Main.toASCII(str.charAt(j)) - b), 256));
+						 System.out.println(x +"                    "+"a= "+i+"   b= "+b);
+						 x="";
+						 
+					}
+
+				}
+			}
+		}
+	}
+	
+
+    public static void main(String[] args) {
+		
+      //Attaque force brut avec cette fonction en devinat l'espace et le caractère L
+      //Main.attaqueForceBrute("ßú»’øw»Gú»");
+    	
+       List<Integer >in=new ArrayList<Integer>(); //contient les codes ascii de l'entrée
+       List<Integer >out=new ArrayList<Integer>();//contient les codes ascii de la sortié
+  	 
+       //la chaine de caractère à l'entrée
+        String strin="ßú»’øw»Gú»«.ÄÄú».»”.E`Fé»”ú»E úÄw»«ß*Ä»G***EEEÄG­Ä`EEEEEEEööööööööööööİ*»’.ÆÄ»`FàûE:ÔĞİ©vj»…rYrY";
+       
+      //la chaine de caractères à la sortie
+        String 	strout="";
+        
+        int n,m;
+        
+		for(int i=0;i<strin.length();i++) 
+		{   
+			//le code ascii de chaque caractère de la chaine à l'entrée
+			n = Main.toASCII(strin.charAt(i));
+			
+			// c'est les codes des caractères spéciaux que Java ne retourne pas directement
+			if (n == 8217)
+				n = 146;
+			if (n == 8221)
+				n = 148;
+			if (n == 8230)
+				n = 133;
+			
+			in.add(n);
+			
+			//le code ascii de chaque caractère de la chaine à sortie
+			m=Main.reduce(Main.invers(256,179)*(n- 187), 256);
+			
+			out.add(m);	
+			
+			//la chaine de caractère à la sortie
+	        strout=strout+Main.toChar(Main.reduce(Main.invers(256,179)*(n- 187), 256));		    
+		}
+		
+		 System.out.println(strout);
+
+	    String str;
+	    
+	    //afficher caractère par caractère la sortie  pour bien déstinguer entre les caractères 
+	    //spéciaux les autres caractères 
+	     for (Integer iout :out){
+	    	 
+            str =Character.toString( Main.toChar(iout));
+		// les caractères  que java ne peux pas afficher directement 
+	    	 if  (iout==0) 
+	    	
+	    		 str="NULL";
+	    	 
+	    	 if  (iout==22) 
+    			 str="SYN";
+	    	 
+	    	 if  (iout==12) 
+    			 str="FF";
+	    	
+	    	 if  (iout==5) 
+    			 str="ENQ";
+	    	 
+	    	 if  (iout==3) 
+    			 str="ETX";
+	    	 
+	    	 if  (iout==21) 
+    			 str="NAK";
+	    	 
+	    	 if  (iout==26) 
+    			 str="SUB";
+	    	 if  (iout==7) 
+    			 str="BEL";
+	    	 
+	    	 if  (iout==23) 
+    			 str="ETB";
+	    	 
+	    	 if  (iout==14) 
+    			 str="SO";
+	    	 
+	    	 System.out.println(str +"   "+iout);	  	 	
+	     }	
+		
+	    	   
+	
+    }	
+	
+ 	    
+}
+	
+

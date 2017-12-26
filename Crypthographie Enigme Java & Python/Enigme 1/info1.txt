@@ -1,0 +1,10 @@
+Alice a écrit à Bob un message en français où il est question d'un nouveau mot de passe. 
+
+Le message clair était sous forme d'un fichier .txt, qui a été chiffré en utilisant le chiffrement affine modulo 256 (octet par octet). Le chiffré est contenu dans le fichier cryptogramme1.txt .
+
+Questions:
+
+1) quelle est la clé secrète utilisée par Alice et Bob ?
+
+2) quel est le nouveau mot de passe dont parle Alice ?
+

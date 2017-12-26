@@ -1,0 +1,6 @@
+1-Le message de Bob est dans le fichier "enigmeout" généré par le programme "test.py".
+
+
+2-l'algorithme utilisé est : faire correspondre les caractères à des autres , et former un nouveau dictionnaire de correspondance et ce dictionnaire est
+
+dans le programme"test.py"  sous nom "dico".

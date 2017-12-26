@@ -1,0 +1,175 @@
+import java.awt.Button;
+import java.awt.FlowLayout;
+import java.awt.Font;
+import java.awt.Frame;
+import java.awt.TextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+
+
+
+	
+	public class IOCryptEur extends Frame
+	{
+	TextField ikey;
+	Button crypt;
+	Button decrypt;
+	TextField itext;
+	public IOCryptEur()
+	{
+	setTitle("The i2n OmEn's CryPteur (" + System.getProperty("user.name") + ")");
+	setSize(260, 60);
+	setLocation(40, 60);
+	setResizable(false);
+	setLayout(new FlowLayout());
+	setFont(new Font("Monaco", Font.PLAIN, 10));
+
+	ikey = new TextField("", 16);
+	crypt = new Button("Crypt");
+	decrypt = new Button("Decrypt");
+	itext = new TextField("", 35);
+
+	add(ikey);
+	add(crypt);
+	add(decrypt);
+	add(itext);
+
+	itext.setText(System.getProperty("user.dir") + "/");
+
+	addWindowListener(new WindowAdapter()
+	{
+	public void windowClosing(WindowEvent e)
+	{
+	dispose();
+	System.exit(0);
+	}
+	});
+
+	crypt.addActionListener(new ActionListener()
+	{
+	public void actionPerformed(ActionEvent e)
+	{
+	try
+	{
+	File file = new File(itext.getText());
+	if(file.isDirectory())
+	{
+	String[] ilist = file.list();
+	for(int i = 0 ; i < ilist.length ; i++)
+	{
+	File c = new File(ilist[i]);
+	Crypt(c.getCanonicalPath());
+	}
+	}
+	else Crypt(file.getCanonicalPath());
+	}
+	catch(IOException o){}
+	}
+	});
+
+	decrypt.addActionListener(new ActionListener()
+	{
+	public void actionPerformed(ActionEvent e)
+	{
+	try
+	{
+	File file = new File(itext.getText());
+	if(file.isDirectory())
+	{
+	String[] ilist = file.list();
+	for(int i = 0 ; i < ilist.length ; i++)
+	{
+	File d = new File(ilist[i]);
+	DeCrypt(d.getCanonicalPath());
+	}
+	}
+	else DeCrypt(file.getCanonicalPath());
+	}
+	catch(IOException o){}
+	}
+	});
+
+	}
+	public void DeCrypt(String path)
+	{
+	try
+	{
+	BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(path)));
+	String line;
+	String text = "";
+	while((line = in.readLine()) != null) text += line + "\r";
+	String key = ikey.getText();
+	int l = 0;
+	String cryptedText = "";
+	for(int i = 0 ; i < text.length() ; i++)
+	{
+	char t = text.charAt(i);
+	int ti = (int)t;
+	if(ti > 126) cryptedText += t;
+	else
+	{
+	char k = key.charAt(l);
+	int ki = (int)k;
+	int tiki = ti - ki;
+	if(tiki < 0) tiki += 126;
+	char tk = (char)tiki;
+	cryptedText += tk;
+	if(l >= key.length() - 1) l = 0;
+	else l++;
+	}
+	}
+	PrintWriter out = new PrintWriter(new FileWriter(path));
+	out.print(cryptedText.substring(0, cryptedText.length()));
+	out.flush();
+	}
+	catch(IOException e)
+	{
+	}
+	}
+	public void Crypt(String path)
+	{
+	try
+	{
+	BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(path)));
+	String line;
+	String text = "";
+	while((line = in.readLine()) != null) text += line + "\r";
+	String key = ikey.getText();
+	int l = 0;
+	String decryptedText = "";
+	for(int i = 0 ; i < text.length() ; i++)
+	{
+	char t = text.charAt(i);
+	int ti = (int)t;
+	if(ti > 126) decryptedText += t;
+	else
+	{
+	char k = key.charAt(l);
+	int ki = (int)k;
+	int tiki = ti + ki;
+	if(tiki > 126) tiki -= 126;
+	char tk = (char)tiki;
+	decryptedText += tk;
+	if(l >= key.length() - 1) l = 0;
+	else l++;
+	}
+	}
+	PrintWriter out = new PrintWriter(new FileWriter(path));
+	out.print(decryptedText.substring(0, decryptedText.length()));
+	out.flush();
+	}
+	catch(IOException e)
+	{
+	}
+	}
+	} 
+
