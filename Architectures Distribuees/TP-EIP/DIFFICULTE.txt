@@ -1,0 +1,5 @@
+
+les difficultés rencontrées durant ce TP :
+	- Implémentation d'une fusion de différentes données à l’aide de Camel avant de les renvoyer à
+	l’utilisateur. C'est-à-dire, filtrer les données identiques afin d’éviter à l’utilisateur
+	de faire le tri manuellement.
