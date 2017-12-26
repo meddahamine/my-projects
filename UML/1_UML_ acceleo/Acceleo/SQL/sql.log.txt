@@ -1,0 +1,101 @@
+Compilation error in the file : /home/m1gil/meddaami/s2/UML/moi/Acceleo-tp3/src/xhtmlSQL.mt
+Unresolved call "eClassifiers"
+
+Compilation error in the file : /home/m1gil/meddaami/s2/UML/moi/Acceleo-tp3/src/xhtmlSQL.mt
+Sequence is not valid
+
+Compilation error in the file : /home/m1gil/meddaami/s2/UML/moi/Acceleo-tp3/src/xhtmlSQL.mt
+Unresolved call "eAttributeType"
+
+Compilation error in the file : /home/m1gil/meddaami/s2/UML/moi/Acceleo-tp3/src/xhtmlSQL.mt
+Sequence is not valid
+
+Compilation error in the file : /home/m1gil/meddaami/s2/UML/moi/Acceleo-tp3/src/xhtmlSQL.mt
+Sequence is not valid
+
+Compilation error in the file : /home/m1gil/meddaami/s2/UML/moi/Acceleo-tp3/src/xhtmlSQL.mt
+Sequence is not valid
+
+Compilation error in the file : /home/m1gil/meddaami/s2/UML/moi/Acceleo-tp3/src/xhtmlSQL.mt
+Sequence is not valid
+
+-> Errors in file : addressbook.sql
+Position 23 : EVAL : Unresolved call "getProperty", in file : /Acceleo-tp3/src/xhtmlSQL.mt, at line : 8, at column : 11, for object : fragment=//EClass file=/emf/2002/Ecore
+Position 52 : EVAL : Unresolved call "getProperty", in file : /Acceleo-tp3/src/xhtmlSQL.mt, at line : 8, at column : 11, for object : fragment=//EClass file=/emf/2002/Ecore
+Position 83 : EVAL : Unresolved call "getProperty", in file : /Acceleo-tp3/src/xhtmlSQL.mt, at line : 8, at column : 11, for object : fragment=//EClass file=/emf/2002/Ecore
+
+
+Compilation error in the file : /home/m1gil/meddaami/s2/UML/moi/Acceleo-tp3/src/xhtmlSQL.mt
+Unresolved call "eClass)"
+
+-> Errors in file : addressbook.sql
+Position 27 : EVAL : Unresolved call "eAttributeType", in file : /Acceleo-tp3/src/xhtmlSQL.mt, at line : 9, at column : 8, for object : fragment=//EClass file=/emf/2002/Ecore
+Position 72 : EVAL : Unresolved call "eAttributeType", in file : /Acceleo-tp3/src/xhtmlSQL.mt, at line : 9, at column : 8, for object : fragment=//EClass file=/emf/2002/Ecore
+Position 119 : EVAL : Unresolved call "eAttributeType", in file : /Acceleo-tp3/src/xhtmlSQL.mt, at line : 9, at column : 8, for object : fragment=//EClass file=/emf/2002/Ecore
+
+
+Compilation error in the file : /home/m1gil/meddaami/s2/UML/moi/Acceleo-tp3/src/xhtmlSQL.mt
+Unresolved call "eAttributeType"
+
+Compilation error in the file : /home/m1gil/meddaami/s2/UML/moi/Acceleo-tp3/src/xhtmlSQL.mt
+Unresolved call "Elist list = ePackage"
+
+Compilation error in the file : /home/m1gil/meddaami/s2/UML/moi/Acceleo-tp3/src/xhtmlSQL.mt
+Sequence is not valid
+
+Compilation error in the file : /home/m1gil/meddaami/s2/UML/moi/Acceleo-tp3/src/xhtmlSQL.mt
+Unresolved call "Elist list = ePackage"
+Compilation error in the file : /home/m1gil/meddaami/s2/UML/moi/Acceleo-tp3/src/xhtmlSQL.mt
+Unresolved call "list"
+
+Compilation error in the file : /home/m1gil/meddaami/s2/UML/moi/Acceleo-tp3/src/xhtmlSQL.mt
+Unresolved call "list = eClassifiers"
+Compilation error in the file : /home/m1gil/meddaami/s2/UML/moi/Acceleo-tp3/src/xhtmlSQL.mt
+Unresolved call "list"
+
+Compilation error in the file : /home/m1gil/meddaami/s2/UML/moi/Acceleo-tp3/src/xhtmlSQL.mt
+Unresolved call "list = eClassifiers"
+Compilation error in the file : /home/m1gil/meddaami/s2/UML/moi/Acceleo-tp3/src/xhtmlSQL.mt
+Unresolved call "eClassifiers"
+
+-> Errors in file : addressbook.sql
+Position 23 : EVAL : Unresolved call "parents", in file : /Acceleo-tp3/src/xhtmlSQL.mt, at line : 8, at column : 9, for object : fragment=//Adresse file=/resource/Acceleo-tp3/model/addressbook.ecore
+Position 52 : EVAL : Unresolved call "parents", in file : /Acceleo-tp3/src/xhtmlSQL.mt, at line : 8, at column : 9, for object : fragment=//Personne file=/resource/Acceleo-tp3/model/addressbook.ecore
+Position 83 : EVAL : Unresolved call "parents", in file : /Acceleo-tp3/src/xhtmlSQL.mt, at line : 8, at column : 9, for object : fragment=//AdressBook file=/resource/Acceleo-tp3/model/addressbook.ecore
+
+
+Compilation error in the file : /home/m1gil/meddaami/s2/UML/moi/Acceleo-tp3/src/xhtmlSQL.mt
+Unresolved call "toSQLType)"
+
+Compilation error in the file : /home/m1gil/meddaami/s2/UML/moi/Acceleo-tp3/src/xhtmlSQL.mt
+Unresolved call "toSQLType)"
+
+Compilation error in the file : /home/m1gil/meddaami/s2/UML/moi/Acceleo-tp3/src/xhtmlSQL.mt
+Unresolved call "toSQLType)"
+
+Compilation error in the file : /home/m1gil/meddaami/s2/UML/moi/Acceleo-tp3/src/xhtmlSQL.mt
+Unresolved call "toSQLType)"
+
+Compilation error in the file : /home/m1gil/meddaami/s2/UML/moi/Acceleo-tp3/src/xhtmlSQL.mt
+Unresolved call "toSQLType)"
+
+Compilation error in the file : /home/m1gil/meddaami/s2/UML/moi/Acceleo-tp3/src/xhtmlSQL.mt
+Unresolved call "toSQLType)"
+
+Compilation error in the file : /home/m1gil/meddaami/s2/UML/moi/Acceleo-tp3/src/xhtmlSQL.mt
+Unresolved call "toSQLType)"
+
+Compilation error in the file : /home/m1gil/meddaami/s2/UML/moi/Acceleo-tp3/src/xhtmlSQL.mt
+Unresolved call "toSQLType)"
+
+Compilation error in the file : /home/m1gil/meddaami/s2/UML/moi/Acceleo-tp3/src/xhtmlSQL.mt
+Unresolved call "toSQLType)"
+
+Compilation error in the file : /home/m1gil/meddaami/s2/UML/moi/Acceleo-tp3/src/xhtmlSQL.mt
+Unresolved call "toSQLType)"
+
+Compilation error in the file : /home/m1gil/meddaami/s2/UML/moi/Acceleo-tp3/src/xhtmlSQL.mt
+Sequence is not valid
+
+Compilation error in the file : /home/m1gil/meddaami/s2/UML/moi/Acceleo-tp3/src/xhtmlSQL.mt
+Sequence is not valid

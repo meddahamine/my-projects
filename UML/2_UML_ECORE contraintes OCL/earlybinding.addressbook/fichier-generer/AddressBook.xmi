@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ASCII"?>
+<addressbook:AdressBook xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:addressbook="addressbook.univrouen.fr" name="Mon Carnet">
+  <personne nom="NOM1" prenom="PRENOM1"/>
+  <personne nom="NOM2" prenom="PRENOM2"/>
+</addressbook:AdressBook>

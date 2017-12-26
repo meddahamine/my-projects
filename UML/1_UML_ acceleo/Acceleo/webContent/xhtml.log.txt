@@ -1,0 +1,2 @@
+Compilation error in the file : /home/m1gil/meddaami/s2/UML/moi/Acceleo-tp3/src/xhtml.mt
+Unresolved call "eOperationType"

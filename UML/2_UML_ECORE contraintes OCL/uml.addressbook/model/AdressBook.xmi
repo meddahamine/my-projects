@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addressbook:AdressBook xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:addressbook="addressbook.univrouen.fr" xsi:schemaLocation="addressbook.univrouen.fr addressbook.ecore">
+  <personne nom="FAMILYNAMEA" prenom="FIRSTNAME" age="20">
+    <adresse numero="7" rue="Rue Pierre Guignois"/>
+  </personne>
+  <personne nom="FAMILYNAMEB" prenom="fisrtname" age="25">
+    <adresse numero="8" rue="rue pierre guignois"/>
+  </personne>
+  <personne nom="FAMILYNAMEC" prenom="firstname" age="22">
+    <adresse rue="9 Rue Pierre Guignois"/>
+  </personne>
+</addressbook:AdressBook>

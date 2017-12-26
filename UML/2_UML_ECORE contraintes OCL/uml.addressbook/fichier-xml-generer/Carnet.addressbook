@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<addressbook:AdressBook xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:addressbook="addressbook.univrouen.fr" name="MonCarnet">
+  <personne nom="PER" prenom="SONNE1" age="25">
+    <adresse numero="7" rue="Rue Pierre Guignois"/>
+  </personne>
+  <personne nom="PER2" prenom="SONNE2" age="20">
+    <adresse numero="8" rue="Boulvard Pierre Guignois"/>
+  </personne>
+  <personne nom="PER3" prenom="SONNE3" age="30">
+    <adresse numero="9" rue="Place Pierre Guignois"/>
+  </personne>
+</addressbook:AdressBook>
