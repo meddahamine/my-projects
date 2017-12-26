@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_groupe21" default="compile.module.groupe21">
+  <dirname property="module.groupe21.basedir" file="${ant.file.module_groupe21}"/>
+  
+  <property name="module.jdk.home.groupe21" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.groupe21" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.groupe21" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.groupe21" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="groupe21.output.dir" value="${module.groupe21.basedir}/out/production/groupe21"/>
+  <property name="groupe21.testoutput.dir" value="${module.groupe21.basedir}/out/test/groupe21"/>
+  
+  <path id="groupe21.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="groupe21.module.production.classpath">
+    <path refid="${module.jdk.classpath.groupe21}"/>
+    <path refid="library.json-20151123.classpath"/>
+  </path>
+  
+  <path id="groupe21.runtime.production.module.classpath">
+    <pathelement location="${groupe21.output.dir}"/>
+    <path refid="library.json-20151123.classpath"/>
+  </path>
+  
+  <path id="groupe21.module.classpath">
+    <path refid="${module.jdk.classpath.groupe21}"/>
+    <pathelement location="${groupe21.output.dir}"/>
+    <path refid="library.json-20151123.classpath"/>
+  </path>
+  
+  <path id="groupe21.runtime.module.classpath">
+    <pathelement location="${groupe21.testoutput.dir}"/>
+    <pathelement location="${groupe21.output.dir}"/>
+    <path refid="library.json-20151123.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.groupe21">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.groupe21">
+    <patternset refid="excluded.from.module.groupe21"/>
+  </patternset>
+  
+  <path id="groupe21.module.sourcepath">
+    <dirset dir="${module.groupe21.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.groupe21" depends="compile.module.groupe21.production,compile.module.groupe21.tests" description="Compile module groupe21"/>
+  
+  <target name="compile.module.groupe21.production" depends="register.custom.compilers" description="Compile module groupe21; production classes">
+    <mkdir dir="${groupe21.output.dir}"/>
+    <javac2 destdir="${groupe21.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.groupe21}/javac">
+      <compilerarg line="${compiler.args.groupe21}"/>
+      <bootclasspath refid="groupe21.module.bootclasspath"/>
+      <classpath refid="groupe21.module.production.classpath"/>
+      <src refid="groupe21.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.groupe21"/>
+    </javac2>
+    
+    <copy todir="${groupe21.output.dir}">
+      <fileset dir="${module.groupe21.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.groupe21.tests" depends="register.custom.compilers,compile.module.groupe21.production" description="compile module groupe21; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.groupe21" description="cleanup module">
+    <delete dir="${groupe21.output.dir}"/>
+    <delete dir="${groupe21.testoutput.dir}"/>
+  </target>
+</project>

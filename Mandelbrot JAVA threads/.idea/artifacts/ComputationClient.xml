@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ComputationClient">
+    <output-path>$PROJECT_DIR$/out/artifacts/ComputationClient</output-path>
+    <root id="archive" name="ComputationClient.jar">
+      <element id="file-copy" path="$PROJECT_DIR$/src/CalculatorClient.java" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/QueriesWatchdog.java" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/MandelbrotSerializerProtocol.java" />
+    </root>
+  </artifact>
+</component>
